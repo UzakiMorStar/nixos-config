@@ -140,6 +140,9 @@
       runtimeInputs = [ (pkgs.python3.withPackages (ps: [ ps.hidapi ])) ];
       text = builtins.readFile ./kzzi_light.sh;
   })
+  (pkgs.writers.writePython3Bin "kzzi-battery" {
+    libraries = [ pkgs.python3Packages.hidapi ];
+  } (builtins.readFile ./kzzi_battery.sh))
   ];
 
   nixpkgs.config.permittedInsecurePackages = [

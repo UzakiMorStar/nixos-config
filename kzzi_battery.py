@@ -25,7 +25,6 @@ if not device_opened:
 
 try:
     data = target_dev.read(32, 6000)
-    # 将过长的条件语句拆行以符合 PEP 8
     if (data and len(data) >= 5 and
             data[0] == 0x04 and data[1] == 0x01 and data[2] == 0x02):
         print(f"{data[4]}%")

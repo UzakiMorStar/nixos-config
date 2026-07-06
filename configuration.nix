@@ -142,7 +142,7 @@
   })
   (pkgs.writers.writePython3Bin "kzzi-battery" {
     libraries = [ pkgs.python3Packages.hidapi ];
-  } (builtins.readFile ./kzzi_battery.sh))
+  } (builtins.readFile ./kzzi_battery.py))
   ];
 
   nixpkgs.config.permittedInsecurePackages = [

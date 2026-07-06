@@ -98,6 +98,10 @@
     shell = pkgs.fish;
   };
 
+  nix.extraOptions = ''
+    access-tokens = github.com=${builtins.readFile /etc/nixos/github_token}
+  '';
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

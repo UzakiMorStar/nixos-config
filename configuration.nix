@@ -186,6 +186,7 @@
   services.displayManager.dms-greeter = {
     enable = true;
     compositor.name = "niri";
+    configHome = "/home/morstar";
   };
   security.polkit.enable = true;
   security.sudo.enable = false;

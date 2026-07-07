@@ -117,7 +117,7 @@
 	telegram-desktop
 	unzip
   chromium
-	file
+  file
 	zip
 	vulkan-tools
 	steam-run
@@ -195,6 +195,8 @@
   services.udev.extraRules = ''
     KERNEL=="hidraw*", ATTRS{idVendor}=="04f3", MODE="0666", TAG+="uaccess"
     SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", MODE="0666", TAG+="uaccess"
+    KERNEL=="hidraw*", ATTRS{idVendor}=="36b0", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="36b0", MODE="0666", TAG+="uaccess"
   '';
 
   hardware.graphics = {
@@ -203,6 +205,7 @@
 
 	extraPackages = with pkgs;[
 		vulkan-loader
+    intel-media-driver
 	];
   }; 
   hardware.bluetooth = {

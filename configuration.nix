@@ -143,6 +143,11 @@
   (pkgs.writers.writePython3Bin "kzzi-battery" {
     libraries = [ pkgs.python3Packages.hidapi ];
   } (builtins.readFile ./kzzi_battery.py))
+  (pkgs.writeShellApplication {
+      name = "startfacetracker";
+      runtimeInputs = [ pkgs.openseeface ];
+      text = builtins.readFile ./start_face_tracker.sh;
+  })
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -206,6 +211,7 @@
 	extraPackages = with pkgs;[
 		vulkan-loader
     intel-media-driver
+    vpl-gpu-rt
 	];
   }; 
   hardware.bluetooth = {
@@ -241,4 +247,5 @@
   fonts.packages = with pkgs;[
 	nerd-fonts.jetbrains-mono
   ];
+  programs.obs-studio.enable = true;
 }

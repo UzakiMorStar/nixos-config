@@ -203,6 +203,8 @@
     SUBSYSTEM=="usb", ATTRS{idVendor}=="04f3", MODE="0666", TAG+="uaccess"
     KERNEL=="hidraw*", ATTRS{idVendor}=="36b0", MODE="0666", TAG+="uaccess"
     SUBSYSTEM=="usb", ATTRS{idVendor}=="36b0", MODE="0666", TAG+="uaccess"
+    KERNEL=="hidraw*", ATTRS{idVendor}=="1209", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1209", MODE="0666", TAG+="uaccess"
   '';
 
   hardware.graphics = {

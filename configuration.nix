@@ -136,6 +136,7 @@
   inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
   usbutils
   mpv
+  freecad
   en-croissant
   (pkgs.writeShellApplication {
       name = "kzzi-light";

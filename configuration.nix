@@ -136,6 +136,7 @@
   inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
   usbutils
   mpv
+  en-croissant
   (pkgs.writeShellApplication {
       name = "kzzi-light";
       runtimeInputs = [ (pkgs.python3.withPackages (ps: [ ps.hidapi ])) ];

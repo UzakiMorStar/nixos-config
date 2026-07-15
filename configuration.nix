@@ -112,11 +112,8 @@
 	cups-pk-helper
 	fastfetch
 	hyfetch
-	android-tools
 	gcc
-	telegram-desktop
 	unzip
-  chromium
   file
 	zip
 	vulkan-tools
@@ -126,29 +123,7 @@
   hicolor-icon-theme
 	papirus-icon-theme
 	catppuccin-cursors.macchiatoDark
-  kazumi
-  heroic
-	discord-ptb
-	piliplus
-	libreoffice-fresh
-	bitwarden-desktop
-  remmina
-  inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
   usbutils
-  mpv
-  (pkgs.writeShellApplication {
-      name = "kzzi-light";
-      runtimeInputs = [ (pkgs.python3.withPackages (ps: [ ps.hidapi ])) ];
-      text = builtins.readFile ./kzzi_light.sh;
-  })
-  (pkgs.writers.writePython3Bin "kzzi-battery" {
-    libraries = [ pkgs.python3Packages.hidapi ];
-  } (builtins.readFile ./kzzi_battery.py))
-  (pkgs.writeShellApplication {
-      name = "startfacetracker";
-      runtimeInputs = [ pkgs.openseeface ];
-      text = builtins.readFile ./start_face_tracker.sh;
-  })
   ];
 
   nixpkgs.config.permittedInsecurePackages = [

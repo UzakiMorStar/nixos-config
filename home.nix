@@ -9,6 +9,16 @@
     ./wechat-desktop-fix.nix
   ];
 
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+    settings = {
+      "*" = {
+        identityAgent = "~/.bitwarden-ssh-agent.sock";
+      };
+    };
+  };
+
   home.packages = with pkgs; [
     wechat
     mpv

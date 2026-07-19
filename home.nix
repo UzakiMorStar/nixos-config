@@ -17,6 +17,8 @@
     wechat
     mpv
     remmina
+  	alacritty
+  	steam-run
     bitwarden-desktop
     libreoffice-fresh
     piliplus

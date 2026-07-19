@@ -105,7 +105,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 	git
-	alacritty
 	xdg-utils
 	wget
 	curl
@@ -117,7 +116,6 @@
   file
 	zip
 	vulkan-tools
-	steam-run
 	xwayland-satellite
 	adwaita-icon-theme
   hicolor-icon-theme

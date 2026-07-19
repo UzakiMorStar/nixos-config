@@ -21,6 +21,11 @@
     sidra = {
       url = "github:wimpysworld/sidra";
     };
+
+    dsearch = {
+      url = "github:AvengeMedia/danksearch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, dms, niri, ... }@inputs: {

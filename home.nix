@@ -6,11 +6,13 @@
   home.stateVersion = "26.05";
 
   imports = [
+    inputs.dsearch.homeModules.default
     ./wechat-desktop-fix.nix
     ./bitwarden-ssh-agent.nix
     ./git-config.nix
   ];
 
+  programs.dsearch.enable = true;
   home.packages = with pkgs; [
     wechat
     mpv

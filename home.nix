@@ -27,6 +27,8 @@
     telegram-desktop
     android-tools
     inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
+    stockfish
+    en-croissant
     (pkgs.writeShellApplication {
        name = "kzzi-light";
        runtimeInputs = [ (pkgs.python3.withPackages (ps: [ ps.hidapi ])) ];

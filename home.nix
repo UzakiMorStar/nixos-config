@@ -18,8 +18,8 @@
     wechat
     mpv
     remmina
-  	alacritty
-  	steam-run
+    alacritty
+    steam-run
     bitwarden-desktop
     libreoffice-fresh
     piliplus

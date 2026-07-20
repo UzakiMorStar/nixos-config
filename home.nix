@@ -32,6 +32,7 @@
     inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
     stockfish
     en-croissant
+    claude-code-bin
     (pkgs.writeShellApplication {
        name = "kzzi-light";
        runtimeInputs = [ (pkgs.python3.withPackages (ps: [ ps.hidapi ])) ];

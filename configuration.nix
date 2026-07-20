@@ -215,11 +215,6 @@
 	remotePlay.openFirewall = true;
 	dedicatedServer.openFirewall = true;
   };
-  programs.neovim = {
-	enable = true;
-	vimAlias = true;
-	defaultEditor = true;
-  };
   fonts.packages = with pkgs;[
 	nerd-fonts.jetbrains-mono
   ];

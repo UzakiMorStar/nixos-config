@@ -46,5 +46,11 @@
     })
   ];
 
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+    defaultEditor = true;
+  };
+
   programs.home-manager.enable = true;
 }

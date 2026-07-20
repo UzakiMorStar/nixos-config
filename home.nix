@@ -44,6 +44,7 @@
        runtimeInputs = [ pkgs.openseeface ];
        text = builtins.readFile ./start_face_tracker.sh;
     })
+    (pkgs.callPackage ./packages/magiskboot.nix {})
   ];
 
   programs.home-manager.enable = true;

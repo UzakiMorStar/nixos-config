@@ -32,7 +32,6 @@
     inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
     stockfish
     en-croissant
-    aider-chat
     claude-code
     (pkgs.writers.writePython3Bin "kzzi-light" {
      libraries = [ pkgs.python3Packages.hidapi ];

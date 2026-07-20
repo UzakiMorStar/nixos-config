@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import hid
 import sys
 
@@ -12,6 +11,7 @@ COMMANDS = {
     "br3": "0606030156000243010000000000000000000000000000000000000000000000",
     "off": "0606180168000042010000000000000000000000000000000000000000000000",
 }
+
 
 def main():
     if len(sys.argv) < 2 or sys.argv[1] not in COMMANDS:
@@ -38,6 +38,7 @@ def main():
     if not found:
         print("❌ 错误: 未能定位到鼠标控制接口", file=sys.stderr)
         sys.exit(1)
+
 
 if __name__ == '__main__':
     main()

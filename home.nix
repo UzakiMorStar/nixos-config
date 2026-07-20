@@ -33,6 +33,7 @@
     stockfish
     en-croissant
     aider-chat
+    claude-code
     (pkgs.writers.writePython3Bin "kzzi-light" {
      libraries = [ pkgs.python3Packages.hidapi ];
     } (builtins.readFile ./kzzi_light.py))
@@ -45,12 +46,6 @@
        text = builtins.readFile ./start_face_tracker.sh;
     })
   ];
-
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    defaultEditor = true;
-  };
 
   programs.home-manager.enable = true;
 }

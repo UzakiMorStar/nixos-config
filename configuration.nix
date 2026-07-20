@@ -218,5 +218,10 @@
   fonts.packages = with pkgs;[
 	nerd-fonts.jetbrains-mono
   ];
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+    defaultEditor = true;
+  };
   programs.obs-studio.enable = true;
 }

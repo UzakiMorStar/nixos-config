@@ -43,6 +43,7 @@
        text = builtins.readFile ./start_face_tracker.sh;
     })
     (pkgs.callPackage ./packages/magiskboot.nix {})
+    (import ./videocaptioner-config.nix pkgs)
   ];
 
   programs.home-manager.enable = true;

@@ -18,14 +18,9 @@
       url = "github:wimpysworld/sidra";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    dsearch = {
-      url = "github:AvengeMedia/danksearch";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, dms, sidra, dsearch, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, dms, sidra, ... }@inputs: {
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };

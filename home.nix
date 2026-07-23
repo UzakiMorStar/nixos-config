@@ -7,10 +7,14 @@
 
   imports = [
     ./wechat-desktop-fix.nix
-    ./bitwarden-ssh-agent.nix
     ./git-config.nix
-    ./fish-greeting.nix
     inputs.sops-nix.homeManagerModules.sops
+    ./modules/home/alacritty.nix
+    ./modules/home/fish.nix
+    ./modules/home/gtk.nix
+    ./modules/home/hyfetch.nix
+    ./modules/home/khal.nix
+    ./modules/home/niri.nix
   ];
 
   sops = {

@@ -25,10 +25,20 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, dms, sidra, sops-nix, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    dms,
+    sidra,
+    sops-nix,
+    ...
+  } @ inputs: {
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
+
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         sops-nix.nixosModules.sops
@@ -37,7 +47,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.extraSpecialArgs = {inherit inputs;};
           home-manager.users.morstar = import ./home.nix;
         }
       ];

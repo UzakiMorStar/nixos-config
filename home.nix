@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   home.username = "morstar";
   home.homeDirectory = "/home/morstar";
   home.stateVersion = "26.05";
@@ -54,15 +57,15 @@
     en-croissant
     claude-code
     (pkgs.writers.writePython3Bin "kzzi-light" {
-     libraries = [ pkgs.python3Packages.hidapi ];
+      libraries = [pkgs.python3Packages.hidapi];
     } (builtins.readFile ./scripts/kzzi_light.py))
     (pkgs.writers.writePython3Bin "kzzi-battery" {
-     libraries = [ pkgs.python3Packages.hidapi ];
+      libraries = [pkgs.python3Packages.hidapi];
     } (builtins.readFile ./scripts/kzzi_battery.py))
     (pkgs.writeShellApplication {
-       name = "startfacetracker";
-       runtimeInputs = [ pkgs.openseeface ];
-       text = builtins.readFile ./scripts/start_face_tracker.sh;
+      name = "startfacetracker";
+      runtimeInputs = [pkgs.openseeface];
+      text = builtins.readFile ./scripts/start_face_tracker.sh;
     })
     (pkgs.callPackage ./packages/magiskboot.nix {})
     (import ./packages/videocaptioner-config.nix pkgs)

@@ -7,11 +7,11 @@ let
       curl-cffi = super.curl-cffi.overridePythonAttrs (_: { doCheck = false; });
     };
   };
-  pyqt5-fw = callPackage ./packages/pyqt5-frameless-window.nix {};
-  pyqt-fluent = callPackage ./packages/pyqt-fluent-widgets.nix {
+  pyqt5-fw = callPackage ./pyqt5-frameless-window.nix {};
+  pyqt-fluent = callPackage ./pyqt-fluent-widgets.nix {
     pyqt5-frameless-window = pyqt5-fw;
   };
-  videocaptioner = callPackage ./packages/videocaptioner.nix {
+  videocaptioner = callPackage ./videocaptioner.nix {
     python312Packages = python312Fixed.pkgs;
     inherit libsForQt5;
     pyqt-fluent-widgets = pyqt-fluent;

@@ -55,14 +55,14 @@
     claude-code
     (pkgs.writers.writePython3Bin "kzzi-light" {
      libraries = [ pkgs.python3Packages.hidapi ];
-    } (builtins.readFile ./kzzi_light.py))
+    } (builtins.readFile ./scripts/kzzi_light.py))
     (pkgs.writers.writePython3Bin "kzzi-battery" {
      libraries = [ pkgs.python3Packages.hidapi ];
-    } (builtins.readFile ./kzzi_battery.py))
+    } (builtins.readFile ./scripts/kzzi_battery.py))
     (pkgs.writeShellApplication {
        name = "startfacetracker";
        runtimeInputs = [ pkgs.openseeface ];
-       text = builtins.readFile ./start_face_tracker.sh;
+       text = builtins.readFile ./scripts/start_face_tracker.sh;
     })
     (pkgs.callPackage ./packages/magiskboot.nix {})
     (import ./videocaptioner-config.nix pkgs)

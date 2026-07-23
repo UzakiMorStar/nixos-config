@@ -6,8 +6,8 @@
   home.stateVersion = "26.05";
 
   imports = [
-    ./wechat-desktop-fix.nix
-    ./git-config.nix
+    ./modules/home/wechat.nix
+    ./modules/home/git.nix
     inputs.sops-nix.homeManagerModules.sops
     ./modules/home/alacritty.nix
     ./modules/home/fish.nix

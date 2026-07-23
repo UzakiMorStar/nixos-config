@@ -10,7 +10,25 @@
     ./bitwarden-ssh-agent.nix
     ./git-config.nix
     ./fish-greeting.nix
+    inputs.sops-nix.homeManagerModules.sops
   ];
+
+  sops = {
+    age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
+    secrets = {
+      "claude_settings" = {
+        sopsFile = ./secrets/claude-settings.json;
+        format = "binary";
+      };
+      "nix_conf" = {
+        sopsFile = ./secrets/nix.conf;
+        format = "binary";
+      };
+    };
+  };
+
+  home.file.".claude/settings.json".source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets."claude_settings".path;
+  xdg.configFile."nix/nix.conf".source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets."nix_conf".path;
 
   home.packages = with pkgs; [
     wechat

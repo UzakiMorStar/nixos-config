@@ -1,0 +1,8 @@
+keys:
+  - &morstar_nixos age1q0g409s0k0fmlmdgxkcvwzrjn232gdls5ulsc92hzmw238n2wguqat8mdu
+
+creation_rules:
+  - path_regex: secrets/.*\.(ya?ml|json|conf)$
+    key_groups:
+      - age:
+        - *morstar_nixos

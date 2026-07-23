@@ -129,6 +129,23 @@
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     ];
+    auto-optimise-store = true;
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 7d";
+  };
+
+  sops = {
+    age.keyFile = "/home/morstar/.config/sops/age/keys.txt";
+    secrets = {
+      mihomo_config = {
+        sopsFile = ./secrets/mihomo-config.yaml;
+        format = "binary";
+      };
+    };
   };
 
   # Niri compositor (Wayland).
@@ -179,7 +196,7 @@
 
   services.mihomo = {
     enable = true;
-    configFile = "/home/morstar/.config/mihomo/config.yaml";
+    configFile = config.sops.secrets."mihomo_config".path;
     tunMode = true;
     webui = pkgs.zashboard;
   };

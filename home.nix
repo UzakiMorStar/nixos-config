@@ -13,7 +13,7 @@
     ./modules/home/git.nix
     inputs.sops-nix.homeManagerModules.sops
     ./modules/home/alacritty.nix
-    ./modules/home/fish.nix
+    ./modules/home/fish
     ./modules/home/gtk.nix
     ./modules/home/hyfetch.nix
     ./modules/home/khal.nix
@@ -56,17 +56,9 @@
     stockfish
     en-croissant
     claude-code
-    (pkgs.writers.writePython3Bin "kzzi-light" {
-      libraries = [pkgs.python3Packages.hidapi];
-    } (builtins.readFile ./scripts/kzzi_light.py))
-    (pkgs.writers.writePython3Bin "kzzi-battery" {
-      libraries = [pkgs.python3Packages.hidapi];
-    } (builtins.readFile ./scripts/kzzi_battery.py))
-    (pkgs.writeShellApplication {
-      name = "startfacetracker";
-      runtimeInputs = [pkgs.openseeface];
-      text = builtins.readFile ./scripts/start_face_tracker.sh;
-    })
+    (pkgs.callPackage ./packages/kzzi-light.nix {})
+    (pkgs.callPackage ./packages/kzzi-battery.nix {})
+    (pkgs.callPackage ./packages/startfacetracker.nix {})
     (pkgs.callPackage ./packages/magiskboot.nix {})
     (import ./packages/videocaptioner-config.nix pkgs)
   ];

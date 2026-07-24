@@ -18,6 +18,7 @@
     ./modules/home/hyfetch.nix
     ./modules/home/khal.nix
     ./modules/home/niri.nix
+    ./modules/home/bitwarden.nix
   ];
 
   sops = {

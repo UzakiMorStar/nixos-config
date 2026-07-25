@@ -11,7 +11,6 @@
   imports = [
     ./modules/home/wechat.nix
     ./modules/home/git.nix
-    inputs.sops-nix.homeManagerModules.sops
     ./modules/home/ghostty.nix
     ./modules/home/fish
     ./modules/home/gtk.nix
@@ -19,6 +18,7 @@
     ./modules/home/khal.nix
     ./modules/home/niri.nix
     ./modules/home/bitwarden.nix
+    inputs.sops-nix.homeManagerModules.sops
   ];
 
   sops = {

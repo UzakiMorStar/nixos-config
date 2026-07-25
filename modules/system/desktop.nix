@@ -16,7 +16,12 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    noto-fonts-color-emoji
   ];
+
+  fonts.fontconfig.localConf = ''
+    <alias binding="same"><family>monospace</family><prefer><family>Noto Color Emoji</family></prefer></alias>
+  '';
 
   environment.sessionVariables = {
     XCURSOR_THEME = "Adwaita";

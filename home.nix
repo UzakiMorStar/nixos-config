@@ -12,7 +12,7 @@
     ./modules/home/wechat.nix
     ./modules/home/git.nix
     inputs.sops-nix.homeManagerModules.sops
-    ./modules/home/alacritty.nix
+    ./modules/home/ghostty.nix
     ./modules/home/fish
     ./modules/home/gtk.nix
     ./modules/home/hyfetch.nix
@@ -42,7 +42,7 @@
     wechat
     mpv
     remmina
-    alacritty
+    ghostty
     steam-run
     bitwarden-desktop
     libreoffice-fresh

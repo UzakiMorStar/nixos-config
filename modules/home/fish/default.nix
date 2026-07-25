@@ -15,6 +15,14 @@ in
       set -gx SSH_AUTH_SOCK "${homeDir}/.bitwarden-ssh-agent.sock"
     '';
 
+    shellAliases = {
+      ls = "eza";
+      ll = "eza -l --git";
+      la = "eza -la --git";
+      lt = "eza --tree --git";
+      l = "eza -l --icons --git --git-repos --group-directories-first";
+    };
+
     interactiveShellInit = ''
       source ${cfgDir}/greeting.fish
       source ${cfgDir}/theme.fish

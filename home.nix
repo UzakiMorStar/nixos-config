@@ -43,6 +43,7 @@
     mpv
     remmina
     ghostty
+    eza
     steam-run
     bitwarden-desktop
     libreoffice-fresh

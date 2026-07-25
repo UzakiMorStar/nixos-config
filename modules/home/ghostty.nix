@@ -7,15 +7,24 @@
 
     # Window
     window-decoration = false
+    window-inherit-working-directory = false
+    working-directory = home
+    gtk-single-instance = false
     window-padding-x = 12
     window-padding-y = 12
     background-opacity = 0.8
+
+    # Rendering
+    alpha-blending = native
 
     # Scrolling
     scrollback-limit = 3023
 
     # Font
+    font-size = 11.5
     font-family = "JetBrainsMono Nerd Font"
+    font-family = "Noto Sans CJK SC"
+    freetype-load-flags = no-autohint
     bold-is-bright = true
 
     # Cursor

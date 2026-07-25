@@ -17,10 +17,17 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     noto-fonts-color-emoji
+    noto-fonts-cjk-sans
   ];
 
+  fonts.fontconfig.subpixel.rgba = "rgb";
+
   fonts.fontconfig.localConf = ''
-    <alias binding="same"><family>monospace</family><prefer><family>Noto Color Emoji</family></prefer></alias>
+    <?xml version="1.0"?>
+    <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+    <fontconfig>
+      <alias binding="same"><family>monospace</family><prefer><family>Noto Color Emoji</family></prefer></alias>
+    </fontconfig>
   '';
 
   environment.sessionVariables = {

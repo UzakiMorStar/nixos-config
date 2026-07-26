@@ -3,13 +3,30 @@
 {
   home.packages = with pkgs; [ ghostty ];
 
+  systemd.user.services."app-com.mitchellh.ghostty" = {
+    Unit = {
+      Description = "Ghostty";
+      After = [ "graphical-session.target" "dbus.socket" ];
+      Requires = [ "dbus.socket" ];
+    };
+    Service = {
+      Type = "dbus";
+      BusName = "com.mitchellh.ghostty";
+      ExecStart = "${pkgs.ghostty}/bin/ghostty --initial-window=false";
+    };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+    };
+  };
+
   xdg.configFile."ghostty/config".text = ''
 
     # Window
     window-decoration = false
     window-inherit-working-directory = false
     working-directory = home
-    gtk-single-instance = false
+    gtk-single-instance = true
+    quit-after-last-window-closed = false
     window-padding-x = 12
     window-padding-y = 12
     background-opacity = 0.8

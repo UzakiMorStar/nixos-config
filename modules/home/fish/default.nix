@@ -16,10 +16,10 @@ in
     '';
 
     shellAliases = {
-      ls = "eza";
-      ll = "eza -l --git";
-      la = "eza -la --git";
-      lt = "eza --tree --git";
+      ls = "eza --icons";
+      ll = "eza -l --git --icons";
+      la = "eza -la --git --icons";
+      lt = "eza --tree --icons --git";
       l = "eza -l --icons --git --git-repos --group-directories-first";
     };
 

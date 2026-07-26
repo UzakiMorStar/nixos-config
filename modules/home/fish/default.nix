@@ -21,6 +21,7 @@ in
       la = "eza -la --git --icons";
       lt = "eza --tree --icons --git";
       l = "eza -l --icons --git --git-repos --group-directories-first";
+      cat = "bat";
     };
 
     interactiveShellInit = ''

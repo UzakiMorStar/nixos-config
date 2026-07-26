@@ -54,6 +54,7 @@
     chromium
     telegram-desktop
     android-tools
+    bat
     inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
     stockfish
     en-croissant

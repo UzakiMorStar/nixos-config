@@ -21,6 +21,9 @@
 
   xdg.configFile."ghostty/config".text = ''
 
+    # Notifications
+    desktop-notifications = false
+
     # Window
     window-decoration = false
     window-inherit-working-directory = false

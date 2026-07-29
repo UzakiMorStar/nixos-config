@@ -44,7 +44,6 @@ in
       nix_shell.format = "via [❄️ $name]($style) ";
 
       directory = {
-        style = "blue";
         read_only = "";
       };
 

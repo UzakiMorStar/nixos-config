@@ -5,7 +5,7 @@
     enable = true;
 
     settings = {
-      font_size = 11.0;
+      font_size = 11.5;
       enable_tab_bar = false;
       window_padding = {
         left = 12;

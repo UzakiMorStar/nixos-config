@@ -11,7 +11,7 @@
   imports = [
     ./modules/home/wechat.nix
     ./modules/home/git.nix
-    ./modules/home/foot.nix
+    ./modules/home/wezterm.nix
     ./modules/home/fish
     ./modules/home/gtk.nix
     ./modules/home/hyfetch.nix
@@ -42,7 +42,7 @@
     wechat
     mpv
     remmina
-    foot
+    wezterm
     eza
     steam-run
     bitwarden-desktop

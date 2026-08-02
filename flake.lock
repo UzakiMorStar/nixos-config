@@ -90,11 +90,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785657487,
-        "narHash": "sha256-G2nClfN5xcREFD8UkYSqot/tIPK33qGGPPlA0UVqZDQ=",
+        "lastModified": 1785691330,
+        "narHash": "sha256-GUGAnvEF4458WSFgFEW4bm8IPeDNkMaAfovIpwz48l0=",
         "owner": "wimpysworld",
         "repo": "sidra",
-        "rev": "20918f8b0858f9e619bf6369ffed3a163eae0f18",
+        "rev": "279683965517190e27d050b6dba101d0a85c00f6",
         "type": "github"
       },
       "original": {

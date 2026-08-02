@@ -16,7 +16,7 @@
     ./modules/home/gtk.nix
     ./modules/home/hyfetch.nix
     ./modules/home/khal.nix
-    ./modules/home/niri.nix
+    ./modules/home/niri/niri.nix
     ./modules/home/bitwarden.nix
     inputs.sops-nix.homeManagerModules.sops
   ];

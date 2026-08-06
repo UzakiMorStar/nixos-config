@@ -21,6 +21,7 @@
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
+    extraCompatPackages = with pkgs; [ dwproton-bin ];
   };
 
   programs.obs-studio.enable = true;

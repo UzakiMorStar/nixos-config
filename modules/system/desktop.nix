@@ -47,6 +47,7 @@
     unzip
     file
     zip
+    p7zip
     vulkan-tools
     xwayland-satellite
     adwaita-icon-theme

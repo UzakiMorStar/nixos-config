@@ -1,4 +1,4 @@
-{pkgs, config, ...}: {
+{pkgs, ...}: {
   programs.fish.enable = true;
 
   programs.neovim = {
@@ -24,17 +24,4 @@
   };
 
   programs.obs-studio.enable = true;
-
-  services.aria2 = {
-    enable = true;
-    rpcSecretFile = config.sops.secrets.aria2_rpc_token.path;
-    settings = {
-      dir = "/home/morstar/Downloads";
-      rpc-listen-port = 6800;
-      max-concurrent-downloads = 3;
-      max-connection-per-server = 4;
-      split = 4;
-      continue = true;
-    };
-  };
 }

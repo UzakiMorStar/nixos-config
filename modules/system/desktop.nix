@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  # Niri compositor (Wayland).
   programs.niri.enable = true;
 
   programs.dank-material-shell = {
@@ -49,6 +48,7 @@
     zip
     p7zip
     vulkan-tools
+    unrar
     xwayland-satellite
     adwaita-icon-theme
     hicolor-icon-theme

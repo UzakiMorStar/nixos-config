@@ -5,6 +5,7 @@
     enable = true;
 
     settings = {
+      front_end = "WebGpu";
       font_size = 11.5;
       enable_tab_bar = false;
       window_padding = {

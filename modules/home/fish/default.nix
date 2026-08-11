@@ -18,11 +18,11 @@ in
     '';
 
     shellAliases = {
-      ls = "eza --icons";
-      ll = "eza -l --git --icons";
-      la = "eza -la --git --icons";
-      lt = "eza --tree --icons --git";
-      l = "eza -l --icons --git --git-repos --group-directories-first";
+      ls = "eza --icons=always";
+      ll = "eza -l --git --icons=always";
+      la = "eza -la --git --icons=always";
+      lt = "eza --tree --icons=always --git";
+      l = "eza -l --icons=always --git --git-repos --group-directories-first";
       cat = "bat";
     };
 

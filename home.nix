@@ -61,6 +61,7 @@
     claude-code
     tsukimi
     protonplus
+    motrix
     (pkgs.callPackage ./packages/kzzi-light.nix {})
     (pkgs.callPackage ./packages/kzzi-battery.nix {})
     (pkgs.callPackage ./packages/startfacetracker.nix {})

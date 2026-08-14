@@ -33,6 +33,10 @@
         sopsFile = ../../secrets/mihomo-config.yaml;
         format = "binary";
       };
+      aria2_rpc_secret = {
+        sopsFile = ../../secrets/aria2-rpc-secret.json;
+        format = "binary";
+      };
     };
   };
 }

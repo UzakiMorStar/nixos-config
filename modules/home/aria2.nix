@@ -10,7 +10,7 @@ in {
   programs.aria2 = {
     enable = true;
     settings = {
-      dir = "${config.home.homeDirectory}/Downloads";
+      dir = "${config.home.homeDirectory}/Downloads/aria2";
       enable-rpc = true;
       rpc-listen-all = false;
       rpc-listen-port = 6800;

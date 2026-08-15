@@ -9,6 +9,7 @@
   home.stateVersion = "26.05";
 
   imports = [
+    ./modules/home/aria2.nix
     ./modules/home/wechat.nix
     ./modules/home/git.nix
     ./modules/home/wezterm.nix

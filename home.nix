@@ -68,6 +68,7 @@
     tsukimi
     protonplus
     ariang
+    wl-clipboard
     (pkgs.callPackage ./packages/kzzi-light.nix {})
     (pkgs.callPackage ./packages/kzzi-battery.nix {})
     (pkgs.callPackage ./packages/startfacetracker.nix {})

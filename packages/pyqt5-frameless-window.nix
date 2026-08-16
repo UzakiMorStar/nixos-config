@@ -12,7 +12,7 @@ python312Packages.buildPythonPackage rec {
 
   propagatedBuildInputs = with python312Packages; [
     pyqt5
-  ] ++ lib.optionals stdenv.isLinux [
+  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
     xcffib
   ];
 

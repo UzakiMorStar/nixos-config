@@ -36,8 +36,13 @@
     };
   };
 
-  home.file.".claude/settings.json".source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets."claude_settings".path;
   xdg.configFile."nix/nix.conf".source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets."nix_conf".path;
+
+  home.activation.claudeSettings = config.lib.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p "$HOME/.claude"
+    rm -f "$HOME/.claude/settings.json"
+    cp "${config.sops.secrets."claude_settings".path}" "$HOME/.claude/settings.json"
+  '';
 
   home.packages = with pkgs; [
     wechat

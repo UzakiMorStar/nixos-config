@@ -59,6 +59,7 @@
     protonplus
     ariang
     wl-clipboard
+    cc-switch
     (pkgs.callPackage ./packages/kzzi-light.nix {})
     (pkgs.callPackage ./packages/kzzi-battery.nix {})
     (pkgs.callPackage ./packages/startfacetracker.nix {})

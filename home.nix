@@ -25,10 +25,6 @@
   sops = {
     age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
     secrets = {
-      "claude_settings" = {
-        sopsFile = ./secrets/claude-settings.json;
-        format = "binary";
-      };
       "nix_conf" = {
         sopsFile = ./secrets/nix.conf;
         format = "binary";
@@ -37,12 +33,6 @@
   };
 
   xdg.configFile."nix/nix.conf".source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets."nix_conf".path;
-
-  home.activation.claudeSettings = config.lib.dag.entryAfter ["writeBoundary"] ''
-    mkdir -p "$HOME/.claude"
-    rm -f "$HOME/.claude/settings.json"
-    cp "${config.sops.secrets."claude_settings".path}" "$HOME/.claude/settings.json"
-  '';
 
   home.packages = with pkgs; [
     wechat

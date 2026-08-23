@@ -42,7 +42,7 @@
     eza
     steam-run
     bitwarden-desktop
-    libreoffice-fresh
+    libreoffice-stable
     piliplus
     discord-ptb
     heroic

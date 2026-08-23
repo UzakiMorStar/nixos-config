@@ -60,6 +60,8 @@
     ariang
     wl-clipboard
     cc-switch
+    hmcl
+    jdk8
     (pkgs.callPackage ./packages/kzzi-light.nix {})
     (pkgs.callPackage ./packages/kzzi-battery.nix {})
     (pkgs.callPackage ./packages/startfacetracker.nix {})

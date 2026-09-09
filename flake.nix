@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     sidra = {
       url = "github:wimpysworld/sidra";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +24,6 @@
     self,
     nixpkgs,
     home-manager,
-    dms,
     sidra,
     sops-nix,
     ...
@@ -42,7 +36,6 @@
       modules = [
         ./configuration.nix
         sops-nix.nixosModules.sops
-        dms.nixosModules.dank-material-shell
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.niri.enable = true;
 
-  programs.dank-material-shell = {
+  programs.dms-shell = {
     enable = true;
     enableSystemMonitoring = true;
     systemd.enable = true;

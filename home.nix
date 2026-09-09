@@ -66,7 +66,6 @@
     (pkgs.callPackage ./packages/kzzi-battery.nix {})
     (pkgs.callPackage ./packages/startfacetracker.nix {})
     (pkgs.callPackage ./packages/magiskboot.nix {})
-    (import ./packages/videocaptioner-config.nix pkgs)
   ];
 
   programs.home-manager.enable = true;

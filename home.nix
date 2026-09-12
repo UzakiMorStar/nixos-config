@@ -60,6 +60,7 @@
     ariang
     wl-clipboard
     cc-switch
+    blender
     hmcl
     jdk8
     (pkgs.callPackage ./packages/kzzi-light.nix {})

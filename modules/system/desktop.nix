@@ -3,7 +3,6 @@
 
   programs.dms-shell = {
     enable = true;
-    enableSystemMonitoring = true;
     systemd.enable = true;
   };
 

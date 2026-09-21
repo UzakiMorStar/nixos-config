@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "concat": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789965860,
+        "narHash": "sha256-VYR40wR2xg/6ZKctFdismNLRboioa6VOwYOnNr7d4Q4=",
+        "owner": "jub0t",
+        "repo": "Concat",
+        "rev": "85f13b8ef48ef471e69c83220637a29125520019",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jub0t",
+        "repo": "Concat",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -7,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789867870,
-        "narHash": "sha256-sOag/7DTqw4tXLI7UxjrZxPGV+dlTe6zFtJn0VSkgFM=",
+        "lastModified": 1789915421,
+        "narHash": "sha256-sLY2PSiu5EGJXgTDAQjHKzzezdpPk0lre9MD2VLpqew=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d2a22a3659a6ae99847ea9176114f6957b8ac62e",
+        "rev": "1944398834e2b9677ee6081e11e42c32d7c1eb5d",
         "type": "github"
       },
       "original": {
@@ -38,6 +58,7 @@
     },
     "root": {
       "inputs": {
+        "concat": "concat",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "sidra": "sidra",
@@ -51,11 +72,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789757250,
-        "narHash": "sha256-9yZ9JMKRd1fQ2/DREoS4HMWtMp1e6igGr3D8qKOdems=",
+        "lastModified": 1789899222,
+        "narHash": "sha256-B00sDpFqhTYuVQIesCdR7GeYJFNogz5U1VmJlSEJnmc=",
         "owner": "wimpysworld",
         "repo": "sidra",
-        "rev": "25fae4a493a07a3144d26dd57788376b8f38b129",
+        "rev": "ebba6a85eadd15de9d324503b012f84bf5eaf4ce",
         "type": "github"
       },
       "original": {
@@ -71,11 +92,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789815532,
-        "narHash": "sha256-/Ql9UE21iDwOU/JdPV20yZtaMpGf+iD2EhIA1aAi540=",
+        "lastModified": 1789890976,
+        "narHash": "sha256-GKwH3zpy7tartuJMG0Rv/xUsdetG1QLmTVv8UKgJLmA=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "166fc0d3f4fcd0dfc9af102ba8e85fa5dd04e5f7",
+        "rev": "7214124c20c1542c90deb54af50e2f53ae02711f",
         "type": "github"
       },
       "original": {

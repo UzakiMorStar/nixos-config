@@ -63,6 +63,7 @@
     blender
     hmcl
     jdk8
+    inputs.concat.packages.${pkgs.stdenv.hostPlatform.system}.default
     (pkgs.callPackage ./packages/kzzi-light.nix {})
     (pkgs.callPackage ./packages/kzzi-battery.nix {})
     (pkgs.callPackage ./packages/startfacetracker.nix {})

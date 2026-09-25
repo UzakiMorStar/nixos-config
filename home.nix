@@ -63,7 +63,6 @@
     blender
     qq
     hmcl
-    virtualbox
     jdk8
     inputs.concat.packages.${pkgs.stdenv.hostPlatform.system}.default
     (pkgs.callPackage ./packages/kzzi-light.nix {})

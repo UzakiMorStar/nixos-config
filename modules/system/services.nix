@@ -9,6 +9,7 @@
 
   virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["morstar"];
 
   programs.wireshark = {
     enable = true;

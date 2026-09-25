@@ -2,7 +2,7 @@
   users.users."morstar" = {
     isNormalUser = true;
     description = "morstar";
-    extraGroups = ["networkmanager" "wheel" "vboxusers" "wireshark"];
+    extraGroups = ["networkmanager" "wheel" "wireshark"];
     shell = pkgs.fish;
   };
 }

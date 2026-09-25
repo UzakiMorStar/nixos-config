@@ -8,7 +8,7 @@
   };
 
   virtualisation.docker.enable = true;
-  virtualisation.vmware.host.enable = true;
+  virtualisation.virtualbox.host.enable = true;
 
   programs.wireshark = {
     enable = true;

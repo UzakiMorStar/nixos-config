@@ -51,7 +51,6 @@
     telegram-desktop
     android-tools
     bat
-    inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
     stockfish
     en-croissant
     claude-code
@@ -64,7 +63,9 @@
     qq
     hmcl
     jdk8
+    payload-dumper-go
     inputs.concat.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.sidra.packages.${pkgs.stdenv.hostPlatform.system}.default
     (pkgs.callPackage ./packages/kzzi-light.nix {})
     (pkgs.callPackage ./packages/kzzi-battery.nix {})
     (pkgs.callPackage ./packages/startfacetracker.nix {})

@@ -29,7 +29,6 @@
         sopsFile = ../../secrets/sing-box-config.json;
         format = "json";
         key = "";
-        restartUnits = [ "sing-box.service" ];
       };
     };
   };

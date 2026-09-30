@@ -9,6 +9,15 @@
   networking.firewall = {
     enable = true;
     checkReversePath = false;
+
+    trustedInterfaces = [
+      "docker0"
+    ];
+
+    extraCommands = ''
+      iptables -I FORWARD -i docker0 -j ACCEPT
+      iptables -I FORWARD -o docker0 -j ACCEPT
+    '';
   };
 
   services.openssh.enable = true;

@@ -25,7 +25,7 @@
   sops = {
     age.keyFile = "/home/morstar/.config/sops/age/keys.txt";
     secrets = {
-      sing-box-config= {
+      sing-box-config = {
         sopsFile = ../../secrets/sing-box-config.json;
         format = "json";
         key = "";

@@ -25,9 +25,11 @@
   sops = {
     age.keyFile = "/home/morstar/.config/sops/age/keys.txt";
     secrets = {
-      mihomo_config = {
-        sopsFile = ../../secrets/mihomo-config.yaml;
-        format = "binary";
+      sing-box-config= {
+        sopsFile = ../../secrets/sing-box-config.json;
+        format = "json";
+        key = "";
+        restartUnits = [ "sing-box.service" ];
       };
     };
   };

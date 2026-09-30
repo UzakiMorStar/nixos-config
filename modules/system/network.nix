@@ -13,10 +13,14 @@
 
   services.openssh.enable = true;
 
-  services.mihomo = {
+  environment.etc."sing-box-dashboard".source = pkgs.sing-box-dashboard;
+
+  services.sing-box = {
     enable = true;
-    configFile = config.sops.secrets."mihomo_config".path;
-    tunMode = true;
-    webui = pkgs.zashboard;
+    package = pkgs.sing-box-ref1nd;
+    settings = {
+      _secret = config.sops.secrets."sing-box-config".path;
+      quote = false;
+    };
   };
 }

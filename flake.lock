@@ -62,6 +62,7 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "sidra": "sidra",
+        "sing-box-ref1nd": "sing-box-ref1nd",
         "sops-nix": "sops-nix"
       }
     },
@@ -82,6 +83,23 @@
       "original": {
         "owner": "wimpysworld",
         "repo": "sidra",
+        "type": "github"
+      }
+    },
+    "sing-box-ref1nd": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790360851,
+        "narHash": "sha256-BTNvucokatGoAWtOWhRZadGZG4AWBmJSw8ThSdFDs0s=",
+        "owner": "reF1nd",
+        "repo": "sing-box",
+        "rev": "7c1ffd271cbc84fed23eaabdcd7e1cefb42a778e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "reF1nd",
+        "ref": "v1.14.2-reF1nd",
+        "repo": "sing-box",
         "type": "github"
       }
     },

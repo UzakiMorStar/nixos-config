@@ -23,6 +23,11 @@
       url = "github:jub0t/Concat";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sing-box-ref1nd = {
+      url = "github:reF1nd/sing-box/v1.14.2-reF1nd";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -48,6 +53,16 @@
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = {inherit inputs;};
           home-manager.users.morstar = import ./home.nix;
+        
+        
+          nixpkgs.overlays = [
+            (final: prev: {
+              sing-box-ref1nd = final.callPackage ./packages/sing-box-ref1nd.nix {
+                sing-box = prev.sing-box;
+                src = inputs.sing-box-ref1nd;
+              };
+            })
+          ];
         }
       ];
     };

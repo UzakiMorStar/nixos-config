@@ -22,6 +22,11 @@
 
   services.openssh.enable = true;
 
+  programs.captive-browser = {
+    enable = true;
+    interface = "wlo1";
+  };
+
   environment.etc."sing-box-dashboard".source = pkgs.sing-box-dashboard;
 
   services.sing-box = {
